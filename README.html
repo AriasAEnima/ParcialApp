@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="escuela-colombiana-de-ingeniería">Escuela Colombiana de Ingeniería</h2>
+<h2 id="ciclos-de-vida-del-desarrollo-de-software-cvds">Ciclos de Vida del Desarrollo de Software – CVDS</h2>
+<h2 id="parcial-práctico---1er-tercio">Parcial Práctico - 1er Tercio</h2>
+<h1 id="parte-i.---calcular-reservas">Parte I. - Calcular reservas</h1>
+<p>Para la primera parte del parcial, se creará un proyecto encargado de realizar los cálculos correspondientes para verificar si una reserva en una aerolínea es posible y el costo total de la misma.</p>
+<ol type="1">
+<li><p>Arbol del proyecto del parcial</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">.</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">+--</span> pom.xml</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">+--</span> README.md</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">+--</span> README.html</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">+--</span> Wiki</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="ex">+--</span> QuickTheories.md</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">+--</span> src</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="ex">+--</span> main</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="kw">|</span>  <span class="ex">+--</span> java</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="kw">|</span>  <span class="kw">|</span>  <span class="ex">+--</span> edu</a>
+<a class="sourceLine" id="cb1-11" title="11">    <span class="kw">|</span>  <span class="kw">|</span>      <span class="ex">+--</span> eci</a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="kw">|</span>  <span class="kw">|</span>          <span class="ex">+--</span> cvds</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="ex">+--</span> calculator</a>
+<a class="sourceLine" id="cb1-14" title="14">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="kw">|</span>  <span class="ex">+--</span> AirlineCalculator.java</a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="kw">|</span>  <span class="ex">+--</span> BookingCalculator.java</a>
+<a class="sourceLine" id="cb1-16" title="16">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="ex">+--</span> model</a>
+<a class="sourceLine" id="cb1-17" title="17">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="kw">|</span>  <span class="ex">+--</span> BookingOutput.java</a>
+<a class="sourceLine" id="cb1-18" title="18">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="kw">|</span>  <span class="ex">+--</span> BookingResult.java</a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="kw">|</span>  <span class="ex">+--</span> SeatCategory.java</a>
+<a class="sourceLine" id="cb1-20" title="20">    <span class="kw">|</span>  <span class="kw">|</span>              <span class="ex">+--</span> servlet</a>
+<a class="sourceLine" id="cb1-21" title="21">    <span class="kw">|</span>  <span class="kw">|</span>                 <span class="ex">+--</span> BookingServlet.java</a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="kw">|</span>  <span class="ex">+--</span> resources</a>
+<a class="sourceLine" id="cb1-23" title="23">    <span class="kw">|</span>      <span class="ex">+--</span> form.html</a>
+<a class="sourceLine" id="cb1-24" title="24">    <span class="kw">|</span>      <span class="ex">+--</span> result.html</a>
+<a class="sourceLine" id="cb1-25" title="25">    <span class="ex">+--</span> test</a>
+<a class="sourceLine" id="cb1-26" title="26">        <span class="ex">+--</span> java</a>
+<a class="sourceLine" id="cb1-27" title="27">            <span class="ex">+--</span> edu</a>
+<a class="sourceLine" id="cb1-28" title="28">                <span class="ex">+--</span> eci</a>
+<a class="sourceLine" id="cb1-29" title="29">                    <span class="ex">+--</span> cvds</a>
+<a class="sourceLine" id="cb1-30" title="30">                        <span class="ex">+--</span> validator</a>
+<a class="sourceLine" id="cb1-31" title="31">                            <span class="ex">+--</span> AirlineCalculatorTest.java</a></code></pre></div></li>
+<li>El proyecto cuenta con una estructura inicial, la cual se describirá a continuación:
+<ul>
+<li>Paquete <code>edu.eci.cvds.calculator</code>: Se encuentra la lógica de negocio.
+<ul>
+<li>Interfaz <code>BookingCalculator</code>: Interfaz principal para cargar la lógica de negocio para realizar los cálculos requeridos.</li>
+<li>Clase <code>AirlineCalculator</code>: Clase principal de la lógica de negocio, donde se realiza el cálculo y validaciones de la reserva.</li>
+</ul></li>
+<li>Paquete <code>edu.eci.cvds.model</code>: Tiene las clases básicas del modelo.
+<ul>
+<li>Clase <code>BookingOutput</code>: Clase de resultado que indica si la reserva es posible y el valor (si aplica).</li>
+<li>Enumeración <code>BookingResult</code>: Enumeración con 3 tipos de resultado.</li>
+<li>Enumeración <code>SeatCategory</code>: Enumeración con 3 tipos básicos de categorías para las sillas (primera clase, económica y salida de emergencia).</li>
+</ul></li>
+<li>Paquete <code>edu.eci.cvds.calculator</code> (en src/test/java): Se encuentran las pruebas de la lógica de negocio.
+<ul>
+<li>Clase <code>AirlineCalculatorTest</code>: En esta clase deben estar las pruebas para <code>AirlineCalculator</code>.</li>
+</ul></li>
+</ul></li>
+<li>Para el cálculo del precio para una reserva en la aerolínea, se tienen las siguientes condiciones:
+<ul>
+<li>Número de sillas:
+<ul>
+<li>Debe ser un numérico entre 1 y 100</li>
+</ul></li>
+<li>Categoría:
+<ul>
+<li>Primera Clase:
+<ul>
+<li>El valor por silla es $100</li>
+<li>La aerolínea no permite comprar más de 15 sillas de esta categoría en una sola reserva</li>
+</ul></li>
+<li>Clase Económica:
+<ul>
+<li>El valor por silla es $50</li>
+<li>La aerolínea no permite comprar más de 50 sillas de esta categoría en una sola reserva</li>
+</ul></li>
+<li>Salida de Emergencia:
+<ul>
+<li>El valor por silla es $50</li>
+<li>Los aviones tienen solo 8 salidas de emergencia</li>
+</ul></li>
+</ul></li>
+<li>Precios:
+<ul>
+<li>Aparte de las condiciones anteriormente nombradas, se tienen los siguientes descuentos:
+<ul>
+<li>2% si se compran más de 5 sillas en la misma reserva</li>
+<li>10% si se compran al menos 10 sillas en la misma reserva</li>
+<li>20% si se compran al menos 15 sillas en la misma reserva</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Implemente con la librería QuickTheories, un generador de reservas que me permita obtener una gran cantidad de escenarios distintos para validar si es posible registrar la reserva y calcular el valor total.</p></li>
+<li><p>En caso de ser necesario, agregue más tipos de error a la enumeración <code>BookingResult</code>, con diferentes clases de equivalencia para el problema.</p></li>
+<li><p>Implemente la lógica específica en la clase <code>AirlineCalculator</code> para cumplir con las restricciones de validaciones y precio, del punto anterior.</p></li>
+<li><p>Verifique la correcta compilación, ejecución y pruebas del proyecto, por medio de la construcción con Maven.</p></li>
+</ol>
+<h1 id="parte-ii.---realizar-validación-web">Parte II. - Realizar validación Web</h1>
+<p>En esta parte del parcial, se va a exponer por medio de unos servicios web, la aplicación implementada hasta el momento, de tal forma que sea posible realizar la validación de una reserva y costo total de la misma por medio de un formulario y peticiones http al servidor.</p>
+<ol type="1">
+<li>Se creó la siguiente estructura para el proyecto web de forma que se permita exponer la lógica a otras aplicaciones:
+<ul>
+<li>Contenido <code>src/main/resources</code>: Recursos a usar por parte de la aplicación.
+<ul>
+<li>Archivo <code>form.html</code>: Página web HTML con el formulario básico para ingreso de un empleado.</li>
+<li>Archivo <code>result.html</code>: Página web HTML básica con el resultado de la validación de un empleado.</li>
+</ul></li>
+<li>Paquete <code>edu.eci.cvds.servlet</code>: Se encuentra un servlet para atender las peticiones web.
+<ul>
+<li>Clase <code>BookingServlet</code>: Servlet con manejo a peticiones tipo <em>GET</em> y <em>POST</em> con respuestas en HTML.</li>
+</ul></li>
+</ul></li>
+<li>Revise la implementación del servlet, donde se da soporte a peticiones de tipo <em>GET</em> y <em>POST</em> de la siguiente manera:
+<ul>
+<li><code>GET /booking</code>: Recibe peticiones tipo <em>GET</em> en el endpoint <code>/booking</code> y carga el formulario de registro.</li>
+<li><code>POST /booking</code>: Recibe peticiones tipo <em>POST</em> en el endpoint <code>/booking</code> para validar la reserva y calcular el valor total con los parámetros que se envían.</li>
+<li>Revise la implementación de los métodos y agregue las funcionalidades pendientes (Tipos de contenido, creación de objetos, mapeo de tipo de datos, códigos de respuesta, etc.) de forma que se encuentren acordes al código implementado y a la funcionalidad requerida. Revise los “TODO” para guiarse respecto a los cambios.</li>
+</ul></li>
+<li><p>Ingrese a la página expuesta por el servlet para visualizar el formulario donde se permite el registro de empleados.</p></li>
+<li><p>En la página del formulario, ingrese algunos datos para probar la implementación del método POST y la correcta respuesta ante algunas entradas.</p></li>
+</ol>
+<h2 id="entrega">Entrega</h2>
+<ul>
+<li>Cargar en Moodle antes de finalizar el parcial.</li>
+<li>Comprima todo el contenido del proyecto en un archivo .zip (excluyendo la carpeta target) y agreguela al esapcio correspondiente en Moodle.</li>
+</ul>
+</body>
+</html>
